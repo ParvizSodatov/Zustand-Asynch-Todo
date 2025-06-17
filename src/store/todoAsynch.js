@@ -55,10 +55,13 @@ export const useTodoAsynch = create((set, get) => ({
 			console.log(error)
 		}
 	},
-
 	addImageByIdForUser: async props => {
 		try {
-			await axios.post(`https://to-dos-api.softclub.tj/api/to-dos/${props.addIdById}/images`,props.formData)
+			await axios.post(
+				`https://to-dos-api.softclub.tj/api/to-dos/${props.addIdById}/images`,
+				props.formData
+			)
+			get().getCategory()
 		} catch (error) {
 			console.log(error)
 		}
