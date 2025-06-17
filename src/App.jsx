@@ -89,7 +89,8 @@ export default function App() {
 	}, [])
 	return (
 		<>
-			<Button variant='outlined' onClick={handleAddClickOpen}></Button>
+
+			<Button variant='outlined' onClick={handleAddClickOpen}>+Add</Button>
 			<TableContainer component={Paper}>
 				<Table sx={{ minWidth: 650 }} aria-label='simple table'>
 					<TableHead>
